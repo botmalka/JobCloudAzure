@@ -34,7 +34,7 @@ print(final_data)
 
 word_cloud = {key: value 
                 for key, value in final_data.items()
-                if value > 0}
+                if value > 1}
 
 final_output_cloud = WordCloud(width = 1920, height = 1080).generate_from_frequencies(word_cloud)
 

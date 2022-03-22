@@ -68,7 +68,7 @@ def job_search(position, location):
         content = result.text 
         soup = BeautifulSoup(content, 'html.parser')
         description = str(soup.text) #pulls the full text from each job 
-        container_client.upload_blob(short_key, description)
+        container_client.upload_blob(short_key, description, overwrite=True)
         word_count = ['']
 
     return word_count
